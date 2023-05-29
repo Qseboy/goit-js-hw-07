@@ -22,12 +22,7 @@ const lightbox = new SimpleLightbox('.gallery li a', {
   captionDelay: 250,
 });
 
-const handleClickToImage = event => {
-  event.preventDefault();
-
-  if (event.target.nodeName !== 'IMG') return;
-  lightbox.on('show.simplelightbox');
-};
+lightbox.on('show.simplelightbox');
 
 galleryEl.addEventListener('click', handleClickToImage);
 
