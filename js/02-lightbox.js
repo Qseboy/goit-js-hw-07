@@ -24,6 +24,4 @@ const lightbox = new SimpleLightbox('.gallery li a', {
 
 lightbox.on('show.simplelightbox');
 
-galleryEl.addEventListener('click', handleClickToImage);
-
 console.log(galleryItems);
