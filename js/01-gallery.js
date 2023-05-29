@@ -19,10 +19,12 @@ galleryEl.insertAdjacentHTML('afterbegin', list);
 // handle click
 const handleClickToImage = event => {
   event.preventDefault();
+
+  if (event.target.nodeName !== 'IMG') return;
+
   const itemOriginalSize = event.target.dataset.source;
   const handleEsc = event => {
     if (event.code === 'Escape') {
-      console.log('esc');
       instance.close();
     }
   };
